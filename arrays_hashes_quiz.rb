@@ -36,8 +36,15 @@ p stops[-5]
 falkirk_stop = stops.include? "Falkirk High"
 p falkirk_stop
 # 9. Reverse the positions of the stops in the array
+p stops.reverse!
 # 10. Print out all the stops using a for loop
+def train_stops(stop)
 
+  for station in stop
+
+    end
+end
+p train_stops(stops)
 ## Exercise B
 
 ### Given the following data structure:
