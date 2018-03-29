@@ -148,10 +148,31 @@ end
  # 9. Add a pet dog to Erik called "Fluffy"
 p users["Erik"][:pets].insert(0,:name => "fluffy",:species => "Dog")
 
+# dog = {
+#   :name => "Fluffy"
+#   :species => "dog"
+# }
+#
+# users["Erik"][:pets] << dog
+
 # # # 10. Add another person to the users hash
  users["Paul"] = {}
  p users
 
+ stuart = {
+   :twitter => "stooggle",
+   :lottery_numbers => [1, 2, 3, 4, 5, 6],
+   :home_town => "Glasgow",
+   :pets => [
+    {
+      :name => "c",
+      :species => "cat",
+    }
+  ]
+ }
+
+users["Stuart"] = stuart
+ p users
  # ## Exercise C
  # ### Given the following data structure:
 
@@ -182,13 +203,16 @@ p users["Erik"][:pets].insert(0,:name => "fluffy",:species => "Dog")
 
  # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
 
-united_kingdom.push(name: "Northern Ireland", population: 1188000, capital: "Belfast")
+united_kingdom.push(name: "Northern Ireland", population: 1811000, capital: "Belfast")
  p united_kingdom
  # 3. Use a loop to print the names of all the countries in the UK.
  for name in united_kingdom
    puts "#{name[:name]}"
  end
 
+for country in united_kingdom
+  p country[:name]
+end
 # 4. Use a loop to find the total population of the UK.
 total_population = 0
 for country in united_kingdom
