@@ -129,9 +129,17 @@ p small_number.min
 even_number = users["Avril"][:lottery_numbers]
 p even_number.select(&:even?)
 
+evens = []
+avrils_numbers = users["Avril"][:lottery_numbers]
+
+for number in avrils_numbers
+  evens << number if number.even?
+end
+
+ p evens
 # # # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
   users["Erik"][:lottery_numbers].push(7)
-  
+
 
  # 8. Change Erik's hometown to Edinburgh
   users["Erik"][:home_town] = "Edinburgh"
